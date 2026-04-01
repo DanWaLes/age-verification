@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=com.example.AgeVerification
+Exec=/usr/lib/age-verification/age-range-api.py
+SystemdService=com.example.AgeVerification.service
