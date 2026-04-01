@@ -1,0 +1,15 @@
+# should live in  /usr/lib/systemd/system/com.example.AgeVerification.service
+
+[Unit]
+Description=Age Verification Service
+Requires=dbus.service
+After=dbus.service
+
+[Service]
+Type=dbus
+BusName=com.example.AgeVerification
+ExecStart=/usr/lib/age-verification/age-range-api.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
