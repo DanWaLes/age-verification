@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# should live in /usr/lib/age-verification/dob_mgmt.sh
 
 users=$(awk -F: '$3 >= 1000 && $3 < 65534 {print $1, $3}' /etc/passwd)
 uids=$(awk -F: '$3 >= 1000 && $3 < 65534 {print $3}' /etc/passwd)
@@ -28,7 +27,7 @@ set_dob() {
 	mkdir -p /etc/ageverification
 
 	echo -n date_input | \
-	openssl aes-256-cbc -pbkdf2 -a -out "/etc/ageverification/${uid}"-dob.enc
+	openssl aes-256-cbc -pbkdf2 -a -out "/etc/ageverification/${uid}.enc"
 
 	echo "Set DOB for user $uid"
 }
