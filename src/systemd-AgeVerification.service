@@ -1,5 +1,3 @@
-# should live in  /usr/lib/systemd/system/com.example.AgeVerification.service
-
 [Unit]
 Description=Age Verification Service
 Requires=dbus.service
