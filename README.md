@@ -46,7 +46,7 @@ Examples of forbibben contributions include complying with:
 * `dbus-AgeVerification.conf` -> `/usr/share/dbus-1/system.d/com.example.AgeVerification.conf`
 * `dbus-AgeVerification.xml` -> `/usr/share/dbus-1/interfaces/com.example.AgeVerification.xml`
 * `systemd-AgeVerification.service` -> `/usr/lib/systemd/system/com.example.AgeVerification.service`
-* `dob_mgmt.sh` -> `/usr/lib/age-verification/dob_mgmt.sh`
+* `dob_mgmt.sh` -> `/usr/bin/age-verification/dob_mgmt.sh`
 * `utils.py` -> `/usr/lib/age-verification/utils.py`
 
 ## Registering age range API service
