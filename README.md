@@ -1,5 +1,5 @@
 # age-verification
-Provides a secure age range API for self-declared ages on Linux systems as an optional standalone program. Non self-declared will never be included.
+Provides a secure age range API for self-declared ages on Linux systems as an optional standalone program.
 
 It is not the job of init systems such as SystemD to force asking for DOB, regardelss of jusristiction, and then store PII in plain text.
 
