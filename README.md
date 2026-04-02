@@ -27,8 +27,8 @@ This is a proof-of-concept. It has not been fully tested.
 * `dob_mgmt.sh` -> `/usr/lib/age-verification/dob_mgmt.sh`
 * `utils.py` -> `/usr/lib/age-verification/utils.py`
 
-# Post install
-On systems using systemd, users may need to run the following for the service to become active:
+# Registering age range API service
+On systems using SystemD, users may need to run the following for the service to become active:
 ```
 # $ sudo systemctl daemon-reload
 # $ sudo systemctl enable com.example.AgeVerification.service
