@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# should live in /usr/lib/age-verification/age-range-api.py
 
 import asyncio
 import getpass
