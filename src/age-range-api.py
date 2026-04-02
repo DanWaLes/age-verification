@@ -14,7 +14,7 @@ from dbus_next.service import ServiceInterface, method, dbus_property
 from dbus_next.constants import BusType
 
 
-from utils import get_dob_file_path, run
+from utils import run
 
 
 class AgeVerification(ServiceInterface):
@@ -52,6 +52,14 @@ def dob_to_age_range():
 			return f'{age_ranges[i - 1]}-{val}'
 
 	return '18+'
+
+
+def get_dob_file_path(uid):
+	# uid from os.getuid()
+	# os.getuid() returns 0 if running as root
+	# value is expected to be >= 1000
+
+	return os.path.abspath(f'/etc/ageverification/{uid}.enc')
 
 
 def decrypt_dob_file():
