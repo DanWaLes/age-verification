@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# should live in /usr/lib/age-verification/utils.py
 
 import subprocess
 
@@ -8,7 +7,7 @@ def get_dob_file_path(uid):
 	# os.getuid() returns 0 if running as root
 	# value is expected to be >= 1000
 
-	return os.path.abspath(f'/etc/ageverification/{uid}-dob.enc')
+	return os.path.abspath(f'/etc/ageverification/{uid}.enc')
 
 
 def run(commands):
