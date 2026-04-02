@@ -2,14 +2,6 @@
 
 import subprocess
 
-def get_dob_file_path(uid):
-	# uid from os.getuid()
-	# os.getuid() returns 0 if running as root
-	# value is expected to be >= 1000
-
-	return os.path.abspath(f'/etc/ageverification/{uid}.enc')
-
-
 def run(commands):
 	result = subprocess.run(commands[0], capture_output = True, text = True)
 
