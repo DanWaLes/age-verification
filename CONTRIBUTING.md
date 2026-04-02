@@ -4,7 +4,7 @@ When raising an issue, include region affected (eg CA, CO) and the legistlation 
 # Scope
 Only age-ranges for self-declared age verification methods will be considered.
 
-This prodject recognises the dangers of forced-intentification methods:
+This project recognises the dangers of forced-intentification methods:
 * https://www.idstrong.com/sentinel/tea-app-data-breach/
 * https://reclaimthenet.org/age-verification-systems-france-privacy-risks-ai-forensics-report
 * https://www.thecanary.co/uk/news/2025/10/10/discord-data-leak/
