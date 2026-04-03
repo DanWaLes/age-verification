@@ -30,8 +30,8 @@ class AgeVerification(ServiceInterface):
 			# unknown
 			return '?'
 
-def get_age_ranges_for_region(region):
-	# see README.md for region numbers and their age ranges
+def get_age_range_for_region(region):
+	# see README.md for region numbers and age ranges
 
 	match region:
 		case 0:
