@@ -20,13 +20,25 @@ This project recognises the dangers of [forced-identification](https://consumerr
 * https://www.openrightsgroup.org/press-releases/13-year-olds-could-be-compelled-to-use-unregulated-age-verification/
 * https://reclaimthenet.org/yoti-gdpr-fine-age-verification
 
-As such, age ranges exclusive to forced-identification methods will **never** be included.
+As such, age ranges *exclusive* to forced-identification methods will never be included.
 
 Note that age ranges trasmitted via the API is still prone to misuse.
 
-### Forbidden contributions
-Examples of forbibben contributions include complying with:
-* Brazil Lei 15.211/2025
+### Inside scope
+#### Common age range 0
+* >=0 - <13
+* >=13 - <16
+* >=16 - <18
+* >=18
+
+Includes:
+* [US - CA AB-1043](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB1043)
+* [US - CO SB 26-051](https://leg.colorado.gov/bill_files/112795/download)
+* [US - MI HB 1046](https://legislature.mi.gov/documents/2025-2026/billintroduced/House/pdf/2025-HIB-4429.pdf) & [US - MI SB 191](https://www.legislature.mi.gov/documents/2025-2026/billintroduced/Senate/pdf/2025-SIB-0191.pdf) (by proxy)
+* [US - NY SB 2025-S8240](https://legislation.nysenate.gov/pdf/bills/2025/S8240) (by proxy)
+### Outside of scope
+Examples of age ranges outside of scope include complying with:
+* [Brazil - Digital ECA](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/L15211.htm)
 
 # Packaging
 ## Dependencies
