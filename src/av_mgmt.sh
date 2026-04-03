@@ -33,19 +33,19 @@ set_av_details() {
 		fi
 	done
 
-	echo "A password will be needed for securely storing age verification details"
-	echo "The user should enter a strong password"
+	echo "A password will be needed for securely storing age verification details."
+	echo "The user should enter a strong password."
 
 	mkdir -p /etc/age-verification
 
 	echo -n "$car\n$dob" | \
 	openssl aes-256-cbc -pbkdf2 -a -out "/etc/age-verification/${uid}.enc"
 
-	echo "Set age verification details for user $uid"
+	echo "Saved age verification details for user $uid."
 }
 
 while true; do
-	echo "Enter an existing user ID"
+	echo "Enter an existing user ID."
 	echo "Users:"
 	echo "$users"
 
