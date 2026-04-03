@@ -1,17 +1,21 @@
 # age-verification
 Provides a secure age range API for self-declared ages on Linux systems as an optional standalone program.
 
-Only users with root access can modify age verification files and all details needed for self-declared age verification are encrypted. Details are not stored in plain text.
-
 This is a proof-of-concept. It has not been fully tested.
 
 ## Motivation
 It is not the job of [init systems](https://en.wikipedia.org/wiki/Init) such as SystemD to force asking for [DOB and other PII](https://itsfoss.com/news/systemd-age-verification/), regardless of jusristiction (where OS-level age verification may not even be required), then store it in plain text. This project seeks to address [project over-reaching](https://youtube.com/watch?v=07hfECzhzG0) and security issues.
 
 ## Scope
-Only age-ranges for self-declared age verification methods will be considered. This is because users with root access are technically able to bypass forced-identification checks and redefine age verification details of all users. There is no need to add extra complexity for otherwise unused age ranges.
+The only goal of this project is to provide a secure age range API for regions requring self-declared age verification. There are inherent privacy and security issues around handeling age verification.
 
-There is not a direct way for "account setup" wizards to use this project. "Account setup" wizards are able store encrypted age verification details in the expected encrypted format in expected file locations. See `av_mgmt.py` as a reference implementation.
+Only age-ranges for self-declared age verification methods will be considered. There is no need to add extra complexity for otherwise unused age ranges.
+
+It is entierly possible that there will become multiple age brackets as new OS-level age verification laws get introduced or revised. The project should be future-proofed against multiple age range requirements so that legacy configurations do not become an issue.
+
+To ensure security, only root users should be able set age verification details of users. Additionally, details needed for age range must be encrypted at rest. Sensative details like DOB should not be passed as a function parameter in plain text as that allows it to be visible in the stack trace, undermining data security.
+
+There will not be a direct way for "account setup" wizards to use this project as it would add extra complexity. There is not a way to ensure the program is connected to a TTY, which would be needed to get a password to decrypt the encrypted DOB function parameter. "Account setup" wizards are able store encrypted age verification details in the expected encrypted format in expected file locations.
 
 ## Privacy and security issues
 This project recognises the dangers of [forced-identification](https://consumerrights.wiki/w/Forced_identification) methods:
