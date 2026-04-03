@@ -1,7 +1,7 @@
 # age-verification
 Provides a secure age range API for self-declared ages on Linux systems as an optional standalone program.
 
-Only users with root access can modify age verification files and all details needed for self-declared age verification are encrypted. Details ar not stored in plain text.
+Only users with root access can modify age verification files and all details needed for self-declared age verification are encrypted. Details are not stored in plain text.
 
 This is a proof-of-concept. It has not been fully tested.
 
