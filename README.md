@@ -3,7 +3,7 @@ Provides a secure age range API for self-declared ages on Linux systems as an op
 
 It is not the job of init systems such as SystemD to force asking for DOB, regardless of jusristiction, and then store PII in plain text.
 
-"Account setup" wizards can store encrypted dates of birth in the expected encrypted format in expected file locations. See `dob_mgmt.sh` as a reference implementation.
+"Account setup" wizards can store encrypted dates of birth in the expected encrypted format in expected file locations. See `av_mgmt.sh` as a reference implementation.
 
 This is a proof-of-concept. It has not been fully tested.
 
@@ -57,11 +57,11 @@ Examples of age ranges outside of scope include:
 
 ## Interal file storage locations
 * `age-range-api.py` -> `/usr/lib/age-verification/age-range-api.py`
+* `av_mgmt.sh` -> `/usr/sbin/age-verification/av_mgmt.sh`
 * `dbus-AgeVerification.service` -> `/usr/share/dbus-1/system-services/com.example.AgeVerification.service`
 * `dbus-AgeVerification.conf` -> `/usr/share/dbus-1/system.d/com.example.AgeVerification.conf`
 * `dbus-AgeVerification.xml` -> `/usr/share/dbus-1/interfaces/com.example.AgeVerification.xml`
 * `systemd-AgeVerification.service` -> `/usr/lib/systemd/system/com.example.AgeVerification.service`
-* `dob_mgmt.sh` -> `/usr/sbin/age-verification/dob_mgmt.sh`
 * `utils.py` -> `/usr/lib/age-verification/utils.py`
 
 ## Registering age range API service
