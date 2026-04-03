@@ -26,10 +26,10 @@ Note that age ranges trasmitted via the API is still prone to misuse.
 
 ### Inside scope
 #### Common age range 0
-* >=0 - <13
-* >=13 - <16
-* >=16 - <18
-* >=18
+* `>=0 - <13`
+* `>=13 - <16`
+* `>=16 - <18`
+* `>=18`
 
 Includes:
 * [US - CA AB-1043](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB1043)
