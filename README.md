@@ -55,7 +55,7 @@ Examples of age ranges that are not supported include:
 
 ## Interal file storage locations
 * `age-range-api.py` -> `/usr/lib/age-verification/age-range-api.py`
-* `av_mgmt.sh` -> `/usr/sbin/age-verification/av_mgmt.sh`
+* `av_mgmt.py` -> `/usr/sbin/age-verification/av_mgmt.py`
 * `dbus-AgeVerification.service` -> `/usr/share/dbus-1/system-services/com.example.AgeVerification.service`
 * `dbus-AgeVerification.conf` -> `/usr/share/dbus-1/system.d/com.example.AgeVerification.conf`
 * `dbus-AgeVerification.xml` -> `/usr/share/dbus-1/interfaces/com.example.AgeVerification.xml`
