@@ -11,7 +11,9 @@ set_av_details() {
 		return
 	fi
 
+	# public IP and clock/region/language not used decide car because it doesnt account for being abroad
 	echo "A common age range number is used to decide regonal age ranges should be used. See README.md for details."
+	
 	while true; do
 		read -r -p "Enter common age range number (between 0 and 0): " car
 		if [[ "$car" =~ ^[0-9]+$ ]] && (( car >= 0 && car <= 0 )); then
