@@ -27,7 +27,7 @@ Note that age ranges trasmitted via the API is still prone to misuse. It would b
 ### Inside scope
 Below is an incomplete list of age ranges that are supported.
 
-Laws marked with an asterix require forced-identification. Users with root access are technically able to bypass forced-identification checks and redefine the DOB and common age range value of all users.
+Laws marked with an asterix require forced-identification. Users with root access are technically able to bypass forced-identification checks and redefine the DOB and common age range number of all users.
 #### Common age range 0
 * `>=0 - <13`
 * `>=13 - <16`
