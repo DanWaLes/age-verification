@@ -47,7 +47,7 @@ Examples of age ranges that are not supported include:
 * python
 * python-dateutil
 * python-dbus-next
-* gawk (optional - manage users' DOB as root)
+* gawk (optional - manage users' age verification details as root)
 * kdialog (optional - DOB decryption dialogs for KDE)
 * yad (optional - DOB decryption dialogs for YAD)
 * zenity (optional - DOB decryption dialogs for GTK)
