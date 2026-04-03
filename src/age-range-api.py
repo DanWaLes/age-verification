@@ -52,20 +52,16 @@ def dob_to_age_range():
 	return '>=18'
 
 
-def get_dob_file_path(uid):
-	# uid from os.getuid()
-	# os.getuid() returns 0 if running as root
-	# value is expected to be >= 1000
-
-	return os.path.abspath(f'/etc/age-verification/{uid}.enc')
-
-
 def decrypt_dob_file():
 	password = get_dob_file_password()
 
+	# os.getuid() returns 0 if running as root
+	# value is expected to be >= 1000
+	dob_file_path = f'/etc/age-verification/{os.getuid()}'
+
 	return run([
 		['echo', password],
-		['openssl', 'aes-256-cbc', '-pbkdf2', '-a', '-d', '-in', get_dob_file_path(os.getuid()), '-pass', 'stdin']
+		['openssl', 'aes-256-cbc', '-pbkdf2', '-a', '-d', '-in', dob_file_path, '-pass', 'stdin']
 	])
 
 
