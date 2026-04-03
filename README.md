@@ -42,7 +42,7 @@ Includes:
 * [US - NY SB 2025-S8240](https://legislation.nysenate.gov/pdf/bills/2025/S8240) *
 ### Outside of scope
 Examples of age ranges outside of scope include:
-* [Brazil - Digital ECA](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/L15211.htm) (<12, >=12 - <18, >=18)
+* [Brazil - Digital ECA](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/L15211.htm) (no spesific age range defined)
 
 # Packaging
 ## Dependencies
