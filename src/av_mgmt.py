@@ -84,11 +84,9 @@ while True:
 
 		for uid, uname in users.items():
 			print(f'{uid} - {uname}')
-
-			uid = int(input('User ID: ').strip())
-
-			set_av_details(uid)
+			set_av_details(int(input('User ID: ').strip()))
 	except EOFError:
 		break
 	except KeyboardInterrupt:
+		print('')
 		sys.exit(0)
