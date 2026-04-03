@@ -1,13 +1,17 @@
 # age-verification
 Provides a secure age range API for self-declared ages on Linux systems as an optional standalone program.
 
-It is not the job of init systems such as SystemD to force asking for DOB, regardless of jusristiction, and then store PII in plain text.
-
-"Account setup" wizards can store encrypted age verification details in the expected encrypted format in expected file locations. See `av_mgmt.py` as a reference implementation.
+Only users with root access can modify age verification files and all details needed for self-declared age verification are encrypted. Details ar not stored in plain text.
 
 This is a proof-of-concept. It has not been fully tested.
+
+## Motivation
+It is not the job of [init systems](https://en.wikipedia.org/wiki/Init) such as SystemD to force asking for [DOB and other PII](https://itsfoss.com/news/systemd-age-verification/), regardless of jusristiction, then store it in plain text. This project seeks to address project over-reaching and security issues.
+
 ## Scope
 Only age-ranges for self-declared age verification methods will be considered. This is because users with root access are technically able to bypass forced-identification checks and redefine age verification details of all users. There is no need to add extra complexity for otherwise unused age ranges.
+
+There is not a direct way for "account setup" wizards to use this project. There is no legally bindong reason to do so. "Account setup" are able store encrypted age verification details in the expected encrypted format in expected file locations, so that this project can provide an age range API. See `av_mgmt.py` as a reference implementation.
 
 ## Privacy and security issues
 This project recognises the dangers of [forced-identification](https://consumerrights.wiki/w/Forced_identification) methods:
@@ -21,10 +25,12 @@ This project recognises the dangers of [forced-identification](https://consumerr
 * https://reclaimthenet.org/yoti-gdpr-fine-age-verification
 
 Note that age ranges trasmitted via the API is still prone to misuse. It would be significantly better if parental controls were to be used instead, as this would prevent software from having access to the age, DOB or age-range of users.
+
 ## Compliance details
 Laws marked with an asterix require forced-identification. This project will never use forced-identification methods because of privacy and security issues outlined above.
 
 This project uses common age range numbers to identify which juristiction should be appled. IP address, time and date settings, precise location, etc. are not used to obtain location as they are both highly invasive and do not account for traveling to differect physical locations.
+
 ### Supported age ranges
 #### Common age range 0
 * `>=0 - <13`
@@ -38,9 +44,11 @@ Includes:
 * [US - IL HB 5511](https://ilga.gov/documents/legislation/104/HB/PDF/10400HB5511lv.pdf) *
 * [US - MI HB 1046](https://legislature.mi.gov/documents/2025-2026/billintroduced/House/pdf/2025-HIB-4429.pdf) *, [US - MI SB 191](https://www.legislature.mi.gov/documents/2025-2026/billintroduced/Senate/pdf/2025-SIB-0191.pdf) *
 * [US - NY SB 2025-S8240](https://legislation.nysenate.gov/pdf/bills/2025/S8240) *
+
 ### Unsupported age ranges
 Examples of age ranges that are not supported include:
 * [Brazil - Digital ECA](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/L15211.htm) * (no spesific age range defined)
+
 # Packaging
 ## Dependencies
 * coreutils
