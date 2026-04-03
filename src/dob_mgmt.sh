@@ -3,21 +3,31 @@
 users=$(awk -F: '$3 >= 1000 && $3 < 65534 {print $1, $3}' /etc/passwd)
 uids=$(awk -F: '$3 >= 1000 && $3 < 65534 {print $3}' /etc/passwd)
 
-set_dob() {
+set_av_details() {
 	uid="$1"
 
 	if ! echo "$uids" | grep -qw "^$uid"; then
-		echo "Could not set DOB for user $uid."
+		echo "Could not set age verification details for user $uid."
 		return
 	fi
 
+	echo "A common age range number is used to decide regonal age ranges should be used. See README.md for details."
 	while true; do
-		read -r -p "Enter DOB (YYYY-MM-DD): " date_input
-
-		if date -d "$date_input" "+%Y-%m-%d" >/dev/null 2>&1; then
+		read -r -p "Enter common age range number (between 0 and 0): " car
+		if [[ "$car" =~ ^[0-9]+$ ]] && (( car >= 0 && car <= 0 )); then
 			break
 		else
-			echo "Invalid format. Please use YYYY-MM-DD."
+			echo "Invalid. Try again."
+		fi
+	done
+
+	while true; do
+		read -r -p "Enter DOB (YYYY-MM-DD): " dob
+
+		if date -d "$dob" "+%Y-%m-%d" >/dev/null 2>&1; then
+			break
+		else
+			echo "Invalid. Try again."
 		fi
 	done
 
@@ -26,10 +36,10 @@ set_dob() {
 
 	mkdir -p /etc/ageverification
 
-	echo -n date_input | \
+	echo -n "$car\n$dob" | \
 	openssl aes-256-cbc -pbkdf2 -a -out "/etc/ageverification/${uid}.enc"
 
-	echo "Set DOB for user $uid"
+	echo "Set age verification details for user $uid"
 }
 
 while true; do
@@ -39,5 +49,5 @@ while true; do
 
 	read -r uid
 
-	set_dob "$uid"
+	set_av_details "$uid"
 done
