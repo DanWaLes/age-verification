@@ -27,31 +27,29 @@ class AgeVerification(ServiceInterface):
 		try:
 			return dob_to_age_range()
 		except Exception:
-			# ran out of supported methods to securely read dob
-			# no requirement to retrieve dob here
-			# may be best to assume 0-13 range anyway?
-			# ignoring errors allows the api to be used reliably, which is a functional requirement
-			return '0-13'
+			# unknown
+			return '?'
+
+def get_age_ranges_for_region(region):
+	# see README.md for region numbers and their age ranges
+
+	match region:
+		case 0:
+			return [0, 13, 16, 18]
+		case _:
+			return []
 
 
 def dob_to_age_range():
-	# Per spec of:
-	# * CA (AB 1043)
-	# * CO (SB 26-51):
-	# 0-<13 -> 0-13
-	# 13-<16 -> 13-16
-	# 16-<18 -> 16-18
-	# >=18 -> 18+
-
-	dob = date.fromisoformat(decrypt_dob_file())
-	age = relativedelta(date.today(), dob).years
-	age_ranges = [0, 13, 16, 18]
+	line_0, line_1 = decrypt_dob_file().splitlines()[:2]
+	age_ranges = get_age_range_for_region(int(line_0))
+	age = relativedelta(date.today(), date.fromisoformat(line_1)).years	
 
 	for i, val in enumerate(age_ranges):
 		if age < val:
-			return f'{age_ranges[i - 1]}-{val}'
+			return f'>={age_ranges[i - 1]} - <{val}'
 
-	return '18+'
+	return '>=18'
 
 
 def get_dob_file_path(uid):
