@@ -32,6 +32,7 @@ def set_av_details(uid):
 	while True:
 		try:
 			car = int(input('Enter common age range number (between 0 and 0): '))
+
 			if car >= 0 and car <= 0:
 				break
 			else:
