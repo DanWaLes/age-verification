@@ -67,6 +67,6 @@ Examples of age ranges outside of scope include:
 ## Registering age range API service
 On systems using SystemD, users may need to run the following for the service to become active:
 ```
-# $ sudo systemctl daemon-reload
-# $ sudo systemctl enable com.example.AgeVerification.service
+# systemctl daemon-reload
+# systemctl enable com.example.AgeVerification.service
 ```
