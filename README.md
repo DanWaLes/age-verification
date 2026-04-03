@@ -11,7 +11,7 @@ It is not the job of [init systems](https://en.wikipedia.org/wiki/Init) such as 
 ## Scope
 Only age-ranges for self-declared age verification methods will be considered. This is because users with root access are technically able to bypass forced-identification checks and redefine age verification details of all users. There is no need to add extra complexity for otherwise unused age ranges.
 
-There is not a direct way for "account setup" wizards to use this project. There is no legally bindong reason to do so. "Account setup" are able store encrypted age verification details in the expected encrypted format in expected file locations, so that this project can provide an age range API. See `av_mgmt.py` as a reference implementation.
+There is not a direct way for "account setup" wizards to use this project. "Account setup" wizards are able store encrypted age verification details in the expected encrypted format in expected file locations. See `av_mgmt.py` as a reference implementation.
 
 ## Privacy and security issues
 This project recognises the dangers of [forced-identification](https://consumerrights.wiki/w/Forced_identification) methods:
