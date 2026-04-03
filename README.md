@@ -7,7 +7,8 @@ It is not the job of init systems such as SystemD to force asking for DOB, regar
 
 This is a proof-of-concept. It has not been fully tested.
 ## Scope
-Only age-ranges for self-declared age verification methods will be considered. This is because users with root access are technically able to bypass forced-identification checks and redefine age verification details of all users. There is no need to add extra complexity for otherwise unused age ranges. Laws marked with an asterix require forced-identification.
+Only age-ranges for self-declared age verification methods will be considered. This is because users with root access are technically able to bypass forced-identification checks and redefine age verification details of all users. There is no need to add extra complexity for otherwise unused age ranges.
+
 ## Privacy and security issues
 This project recognises the dangers of [forced-identification](https://consumerrights.wiki/w/Forced_identification) methods:
 * https://www.idstrong.com/sentinel/tea-app-data-breach/
@@ -20,9 +21,11 @@ This project recognises the dangers of [forced-identification](https://consumerr
 * https://reclaimthenet.org/yoti-gdpr-fine-age-verification
 
 Note that age ranges trasmitted via the API is still prone to misuse. It would be significantly better if parental controls were to be used instead, as this would prevent software from having access to the age, DOB or age-range of users.
-## Supported age ranges
+## Compliance details
+Laws marked with an asterix require forced-identification. This project will never use forced-identification methods because of privacy and security issues outlined above.
+### Supported age ranges
 This project uses common age range numbers to identify which juristiction should be appled.
-### Common age range 0
+#### Common age range 0
 * `>=0 - <13`
 * `>=13 - <16`
 * `>=16 - <18`
@@ -34,7 +37,7 @@ Includes:
 * [US - IL HB 5511](https://ilga.gov/documents/legislation/104/HB/PDF/10400HB5511lv.pdf) *
 * [US - MI HB 1046](https://legislature.mi.gov/documents/2025-2026/billintroduced/House/pdf/2025-HIB-4429.pdf) *, [US - MI SB 191](https://www.legislature.mi.gov/documents/2025-2026/billintroduced/Senate/pdf/2025-SIB-0191.pdf) *
 * [US - NY SB 2025-S8240](https://legislation.nysenate.gov/pdf/bills/2025/S8240) *
-## Unsupported age ranges
+### Unsupported age ranges
 Examples of age ranges that are not supported include:
 * [Brazil - Digital ECA](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/L15211.htm) * (no spesific age range defined)
 # Packaging
