@@ -1,7 +1,7 @@
 # age-verification
 Provides a secure age range API for self-declared ages on Linux systems as an optional standalone program.
 
-It is not the job of init systems such as SystemD to force asking for DOB, regardelss of jusristiction, and then store PII in plain text.
+It is not the job of init systems such as SystemD to force asking for DOB, regardless of jusristiction, and then store PII in plain text.
 
 "Account setup" wizards can store encrypted dates of birth in the expected encrypted format in expected file locations. See `dob_mgmt.sh` as a reference implementation.
 
@@ -22,9 +22,12 @@ This project recognises the dangers of [forced-identification](https://consumerr
 
 As such, age ranges *exclusive* to forced-identification methods will never be included.
 
-Note that age ranges trasmitted via the API is still prone to misuse.
+Note that age ranges trasmitted via the API is still prone to misuse. It would be significantly better if parental controls were to be used instead.
 
 ### Inside scope
+Below is an incomplete list of age ranges that are supported.
+
+Laws marks with an asterix require forced-identification. Users with root access are technically able to bypass forced-identification checks.
 #### Common age range 0
 * `>=0 - <13`
 * `>=13 - <16`
@@ -34,10 +37,10 @@ Note that age ranges trasmitted via the API is still prone to misuse.
 Includes:
 * [US - CA AB-1043](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB1043)
 * [US - CO SB 26-051](https://leg.colorado.gov/bill_files/112795/download)
-* [US - MI HB 1046](https://legislature.mi.gov/documents/2025-2026/billintroduced/House/pdf/2025-HIB-4429.pdf) & [US - MI SB 191](https://www.legislature.mi.gov/documents/2025-2026/billintroduced/Senate/pdf/2025-SIB-0191.pdf) (by proxy)
-* [US - NY SB 2025-S8240](https://legislation.nysenate.gov/pdf/bills/2025/S8240) (by proxy)
+* [US - MI HB 1046](https://legislature.mi.gov/documents/2025-2026/billintroduced/House/pdf/2025-HIB-4429.pdf) & [US - MI SB 191](https://www.legislature.mi.gov/documents/2025-2026/billintroduced/Senate/pdf/2025-SIB-0191.pdf) *
+* [US - NY SB 2025-S8240](https://legislation.nysenate.gov/pdf/bills/2025/S8240) *
 ### Outside of scope
-Examples of age ranges outside of scope include complying with:
+Examples of age ranges outside of scope include:
 * [Brazil - Digital ECA](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/L15211.htm)
 
 # Packaging
