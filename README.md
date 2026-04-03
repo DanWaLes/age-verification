@@ -23,8 +23,9 @@ This project recognises the dangers of [forced-identification](https://consumerr
 Note that age ranges trasmitted via the API is still prone to misuse. It would be significantly better if parental controls were to be used instead, as this would prevent software from having access to the age, DOB or age-range of users.
 ## Compliance details
 Laws marked with an asterix require forced-identification. This project will never use forced-identification methods because of privacy and security issues outlined above.
+
+This project uses common age range numbers to identify which juristiction should be appled. IP address, time and date settings, precise location, etc. are not used to obtain location as they are both highly invasive and do not account for traveling to differect physical locations.
 ### Supported age ranges
-This project uses common age range numbers to identify which juristiction should be appled.
 #### Common age range 0
 * `>=0 - <13`
 * `>=13 - <16`
