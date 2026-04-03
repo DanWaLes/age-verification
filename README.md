@@ -43,12 +43,10 @@ Examples of age ranges that are not supported include:
 * [Brazil - Digital ECA](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/L15211.htm) * (no spesific age range defined)
 # Packaging
 ## Dependencies
-* bash
 * coreutils
 * python
 * python-dateutil
 * python-dbus-next
-* gawk (optional - manage users' age verification details as root)
 * kdialog (optional - DOB decryption dialogs for KDE)
 * yad (optional - DOB decryption dialogs for YAD)
 * zenity (optional - DOB decryption dialogs for GTK)
