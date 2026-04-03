@@ -33,13 +33,13 @@ set_av_details() {
 		fi
 	done
 
-	echo "A password will be needed for securely storing DOB"
-	echo "This password should be shared with the user"
+	echo "A password will be needed for securely storing age verification details"
+	echo "The user should enter a strong password"
 
-	mkdir -p /etc/ageverification
+	mkdir -p /etc/age-verification
 
 	echo -n "$car\n$dob" | \
-	openssl aes-256-cbc -pbkdf2 -a -out "/etc/ageverification/${uid}.enc"
+	openssl aes-256-cbc -pbkdf2 -a -out "/etc/age-verification/${uid}.enc"
 
 	echo "Set age verification details for user $uid"
 }
