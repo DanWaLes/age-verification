@@ -6,7 +6,7 @@ Only users with root access can modify age verification files and all details ne
 This is a proof-of-concept. It has not been fully tested.
 
 ## Motivation
-It is not the job of [init systems](https://en.wikipedia.org/wiki/Init) such as SystemD to force asking for [DOB and other PII](https://itsfoss.com/news/systemd-age-verification/), regardless of jusristiction, then store it in plain text. This project seeks to address project over-reaching and security issues.
+It is not the job of [init systems](https://en.wikipedia.org/wiki/Init) such as SystemD to force asking for [DOB and other PII](https://itsfoss.com/news/systemd-age-verification/), regardless of jusristiction, then store it in plain text. This project seeks to address [project over-reaching](https://youtube.com/watch?v=07hfECzhzG0) and security issues.
 
 ## Scope
 Only age-ranges for self-declared age verification methods will be considered. This is because users with root access are technically able to bypass forced-identification checks and redefine age verification details of all users. There is no need to add extra complexity for otherwise unused age ranges.
