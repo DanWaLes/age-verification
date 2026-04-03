@@ -11,7 +11,7 @@ set_av_details() {
 		return
 	fi
 
-	# public IP and clock/region/language not used decide car because it doesnt account for being abroad
+	# public IP/clock/region/language not used decide car because it doesnt account for being abroad
 	echo "A common age range number is used to decide regonal age ranges should be used. See README.md for details."
 	
 	while true; do
