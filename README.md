@@ -7,7 +7,7 @@ This is a proof-of-concept. It has not been fully tested.
 It is not the job of [init systems](https://en.wikipedia.org/wiki/Init) such as SystemD to force asking for [DOB and other PII](https://itsfoss.com/news/systemd-age-verification/), regardless of jusristiction (where OS-level age verification may not even be required), then store it in plain text. This project seeks to address [project over-reaching](https://youtube.com/watch?v=07hfECzhzG0) and security issues.
 
 ## Scope
-The only goal of this project is to provide a secure age range API for regions requring OS-level age verification, as per OS-level age verification laws. There are inherent privacy and security issues around handeling age verification.
+The only goal of this project is to provide a secure age range API for regions requring OS-level age verification for Linux systems, as per OS-level age verification laws. There are inherent privacy and security issues around handeling age verification.
 
 The following laws require an OS-level self-declared age verification age range API and *will be implemented*:
 * [US - CA AB-1043](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB1043)
