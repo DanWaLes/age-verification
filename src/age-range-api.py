@@ -16,7 +16,6 @@ from dbus_next.constants import BusType
 
 from utils import run
 
-
 class AgeVerification(ServiceInterface):
 	def __init__(self):
 		super().__init__('com.example.AgeVerification')
@@ -31,18 +30,19 @@ class AgeVerification(ServiceInterface):
 			return '?'
 
 def get_age_range_for_region(region):
-	# see README.md for region numbers and age ranges
+	regions = {
+		'US - CA': 0
+		'US - CO': 0
+	}
 
-	match region:
+	match regions[region]:
 		case 0:
 			return [0, 13, 16, 18]
-		case _:
-			return []
 
 
 def dob_to_age_range():
 	line_0, line_1 = decrypt_dob_file().splitlines()[:2]
-	age_ranges = get_age_range_for_region(int(line_0))
+	age_ranges = get_age_range_for_region(line_0)
 	age = relativedelta(date.today(), date.fromisoformat(line_1)).years	
 
 	for i, val in enumerate(age_ranges):
