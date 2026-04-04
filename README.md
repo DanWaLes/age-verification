@@ -1,5 +1,5 @@
 # age-verification
-Provides a secure age range API for self-declared ages on Linux systems as an optional standalone program.
+Provides a secure age range API for self-declared OS-level age verification on Linux systems, as an optional standalone package.
 
 This is a proof-of-concept. It has not been fully tested.
 
@@ -7,13 +7,13 @@ This is a proof-of-concept. It has not been fully tested.
 It is not the job of [init systems](https://en.wikipedia.org/wiki/Init) such as SystemD to force asking for [DOB and other PII](https://itsfoss.com/news/systemd-age-verification/), regardless of jusristiction (where OS-level age verification may not even be required), then store it in plain text. This project seeks to address [project over-reaching](https://youtube.com/watch?v=07hfECzhzG0) and security issues.
 
 ## Scope
-The only goal of this project is to provide a secure age range API for regions requring self-declared age verification, as per OS-level self-declared age verification laws. There are inherent privacy and security issues around handeling age verification.
+The only goal of this project is to provide a secure age range API for regions requring OS-level age verification, as per OS-level age verification laws. There are inherent privacy and security issues around handeling age verification.
 
 The following laws require an OS-level self-declared age verification age range API and *will be implemented*:
 * [US - CA AB-1043](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB1043)
 * [US - CO SB 26-051](https://leg.colorado.gov/bill_files/112795/download)
 
-The following laws require an OS-level forced-identification age verification age range API and *will not be implemented*:
+The following laws require an OS-level forced-identification age verification age range API and *will never be implemented* due to [past forced-identification incidents](#Privacy-and-security-issues):
 * [Brazil - Digital ECA](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/L15211.htm)
 * [US - IL HB 5511](https://ilga.gov/documents/legislation/104/HB/PDF/10400HB5511lv.pdf)
 * [US - MI HB 1046](https://legislature.mi.gov/documents/2025-2026/billintroduced/House/pdf/2025-HIB-4429.pdf), [US - MI SB 191](https://www.legislature.mi.gov/documents/2025-2026/billintroduced/Senate/pdf/2025-SIB-0191.pdf)
@@ -35,8 +35,6 @@ This project recognises the dangers of [forced-identification](https://consumerr
 * https://www.openrightsgroup.org/press-releases/roblox-reddit-and-discord-users-compelled-to-use-biometric-id-system-backed-by-palantir-co-founder-peter-thiel/
 * https://www.openrightsgroup.org/press-releases/13-year-olds-could-be-compelled-to-use-unregulated-age-verification/
 * https://reclaimthenet.org/yoti-gdpr-fine-age-verification
-
-This project will never implement or use age/identity verification services based on these past incidents.
 
 Note that age ranges trasmitted via the API are still prone to misuse. Services have a legal duty to not misuse it, but there is not any real measure that would stop them from doing so. The only way to prevent this would be if such data was never sent in the first place. It would be significantly better if on-device parental controls were to be used instead, as this would prevent such data being transmitted in the first place.
 
