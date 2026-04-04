@@ -19,8 +19,6 @@ The following laws require an OS-level forced-identification age verification ag
 * [US - MI HB 1046](https://legislature.mi.gov/documents/2025-2026/billintroduced/House/pdf/2025-HIB-4429.pdf), [US - MI SB 191](https://www.legislature.mi.gov/documents/2025-2026/billintroduced/Senate/pdf/2025-SIB-0191.pdf)
 * [US - NY SB 2025-S8240](https://legislation.nysenate.gov/pdf/bills/2025/S8240)
   
-Only age-ranges for self-declared age verification methods will be considered. There is no need to add extra complexity for otherwise unused age ranges.
-
 It is entierly possible that there will become multiple age brackets as new OS-level age verification laws get introduced or revised. The project should be future-proofed against multiple age range requirements so that legacy configurations do not become an issue.
 
 To ensure security, only root users should be able set age verification details of users. Additionally, details needed for age range must be encrypted at rest. Sensative details like DOB should not be passed as a function parameter in plain text as that allows it to be visible in the stack trace, undermining data security.
