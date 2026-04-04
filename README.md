@@ -19,7 +19,7 @@ The following laws require an OS-level forced-identification age verification ag
 * [US - MI HB 1046](https://legislature.mi.gov/documents/2025-2026/billintroduced/House/pdf/2025-HIB-4429.pdf), [US - MI SB 191](https://www.legislature.mi.gov/documents/2025-2026/billintroduced/Senate/pdf/2025-SIB-0191.pdf)
 * [US - NY SB 2025-S8240](https://legislation.nysenate.gov/pdf/bills/2025/S8240)
   
-Currently both US - CA AB-1043 and US - CO SB 26-051 require the same age ranges. It is entierly possible that there will become multiple age brackets as new OS-level age verification laws get introduced or revised. The project should be future-proofed against multiple age range requirements so that legacy configurations do not become an issue. A way to do this is to ask the root user which juristiction applies to them. The use of IP address, precise location, time and date settings can be highly invasive and do not account for being in a different physical location. Dates of brith are being trusted to be correct, as should the region.
+Currently both US - CA AB-1043 and US - CO SB 26-051 require the same age ranges. It is entierly possible that there will become multiple age brackets as new OS-level age verification laws get introduced or revised. This project is future-proofed against multiple age range brackets so that legacy data storage does not become an issue. This is done by asking users which juristiction applies. The use of IP address, precise location, time and date settings can be highly invasive and do not account for being in a different physical location. Dates of birth are being trusted to be correct, as should the region.
 
 To ensure security, only root users should be able set age verification details of users. Additionally, details needed for age range must be encrypted at rest. Sensative details like DOB should not be passed as a function parameter in plain text as that allows it to be visible in the stack trace, undermining data security.
 
@@ -54,9 +54,9 @@ The age range API returns values in the following format:
 * python
 * python-dateutil
 * python-dbus-next
-* kdialog (optional - DOB decryption dialogs for KDE)
-* yad (optional - DOB decryption dialogs for YAD)
-* zenity (optional - DOB decryption dialogs for GTK)
+* kdialog (optional - decryption dialogs for KDE)
+* yad (optional - decryption dialogs for YAD)
+* zenity (optional - decryption dialogs for GTK)
 
 ## Interal file storage locations
 * `age-range-api.py` -> `/usr/lib/age-verification/age-range-api.py`
