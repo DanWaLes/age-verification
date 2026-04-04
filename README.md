@@ -9,7 +9,7 @@ It is not the job of [init systems](https://en.wikipedia.org/wiki/Init) such as 
 ## Scope
 The only goal of this project is to provide a secure age range API for regions requring self-declared age verification, as per OS-level self-declared age verification laws. There are inherent privacy and security issues around handeling age verification.
 
-The following laws require an OS-level self-declared age verification age range API and *will be implemented*
+The following laws require an OS-level self-declared age verification age range API and *will be implemented*:
 * [US - CA AB-1043](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB1043)
 * [US - CO SB 26-051](https://leg.colorado.gov/bill_files/112795/download)
 
