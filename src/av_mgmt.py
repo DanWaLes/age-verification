@@ -25,18 +25,26 @@ def set_av_details(uid):
 		print(f'Could not set age verification details for user {uid}.')
 		return
 
-	print('A common age range number is used to decide regional age ranges. See README.md for details.')
+	print('To determine which age range brackets are used, you must select which region you live in.')
 
-	car = None
+	region = None
+	regions = [
+		'US - CA',
+		'US - CO'
+	]
+	regions_str = ',\n'.join(f"{i}: {region}" for i, region in enumerate(regions))
 
 	while True:
 		try:
-			car = int(input('Enter common age range number (between 0 and 0): '))
+			print('Select one of:')
+			print(regions_str)
 
-			if car >= 0 and car <= 0:
-				break
-			else:
+			region = int(input('Region number: '))
+
+			if region < 0 or region > len(regions):
 				print('Invalid. Try again.')
+			else:
+				break
 		except ValueError:
 			print('Invalid. Try again.')
 
@@ -65,7 +73,7 @@ def set_av_details(uid):
 				'openssl', 'aes-256-cbc', '-pbkdf2', '-a',
 				'-out', f'{av_dir}/{uid}.enc'
 			],
-			input=f'{car}\n{dob}'.encode(),
+			input=f'{regions[region]}\n{dob}'.encode(),
 			stdout=subprocess.PIPE,
 			stderr=subprocess.PIPE,
 			check=True
