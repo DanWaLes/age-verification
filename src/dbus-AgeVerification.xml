@@ -4,10 +4,10 @@
 	<interface name="com.example.AgeVerification">
 		<method name="GetAgeRange">
 			<arg name="range" type="s" direction="out">
-				<doc:doc><doc:summary>Retrieves the age range of the current user to applications, which will more that likely be used for purposes beyond age-gated feature access.</doc:summary></doc:doc>
+				<doc:doc><doc:summary>Retrieves the age range of the current user to applications, which will more that likely be used for purposes beyond age verification.</doc:summary></doc:doc>
 			</arg>
 			<doc:doc>
-				<doc:description><doc:para>Provides mass-surveillance infrastructure.</doc:para></doc:description>
+				<doc:description><doc:para>Provides an an age range API for software to use for age verification purpuses.</doc:para></doc:description>
 			</doc:doc>
 		</method>
 	</interface>
