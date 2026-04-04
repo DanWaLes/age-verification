@@ -28,7 +28,11 @@ This project recognises the dangers of [forced-identification](https://consumerr
 * https://www.openrightsgroup.org/press-releases/13-year-olds-could-be-compelled-to-use-unregulated-age-verification/
 * https://reclaimthenet.org/yoti-gdpr-fine-age-verification
 
-Note that age ranges trasmitted via the API is still prone to misuse. It would be significantly better if parental controls were to be used instead, as this would prevent software from having access to the age, DOB or age-range of users.
+It would not be appropriate for this project to implement or use identity verification services based on these past incidents.
+
+Note that age ranges trasmitted via the API are still prone to misuse. Services have a legal duty to not misuse it, but there is not any real assurance that they wont.
+
+It would be significantly better if parental controls were to be used instead, as this would prevent software from having access to the DOB, age or age-range of users.
 
 ## Compliance details
 Laws marked with an asterix require forced-identification. This project will never use forced-identification methods because of privacy and security issues outlined above.
