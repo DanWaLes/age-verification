@@ -21,12 +21,9 @@ class AgeVerification(ServiceInterface):
 		super().__init__('com.example.AgeVerification')
 
 	def GetAgeRange(self):
-		# must return a string to match with spec interface
-
 		try:
 			return dob_to_age_range()
 		except Exception:
-			# unknown
 			return '?'
 
 def get_age_range_for_region(region):
