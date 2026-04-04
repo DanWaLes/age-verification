@@ -26,6 +26,7 @@ class AgeVerification(ServiceInterface):
 		except Exception:
 			return '?'
 
+
 def get_age_range_for_region(region):
 	regions = {
 		'US - CA': 0
