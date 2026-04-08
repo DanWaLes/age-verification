@@ -27,14 +27,15 @@ There will not be a direct way for "account setup" wizards to use this project a
 
 ## Privacy and security issues
 This project recognises the dangers of [forced-identification](https://consumerrights.wiki/w/Forced_identification) methods:
+* https://www.eff.org/deeplinks/2024/06/hack-age-verification-company-shows-privacy-danger-social-media-laws
 * https://www.idstrong.com/sentinel/tea-app-data-breach/
 * https://reclaimthenet.org/age-verification-systems-france-privacy-risks-ai-forensics-report
 * https://www.thecanary.co/uk/news/2025/10/10/discord-data-leak/
 * https://www.bleepingcomputer.com/news/security/hackers-claim-discord-breach-exposed-data-of-55-million-users/
-* https://www.malwarebytes.com/blog/news/2026/02/age-verification-vendor-persona-left-frontend-exposed
 * https://www.openrightsgroup.org/press-releases/roblox-reddit-and-discord-users-compelled-to-use-biometric-id-system-backed-by-palantir-co-founder-peter-thiel/
-* https://www.openrightsgroup.org/press-releases/13-year-olds-could-be-compelled-to-use-unregulated-age-verification/
+* https://www.malwarebytes.com/blog/news/2026/02/age-verification-vendor-persona-left-frontend-exposed
 * https://reclaimthenet.org/yoti-gdpr-fine-age-verification
+* https://www.openrightsgroup.org/press-releases/13-year-olds-could-be-compelled-to-use-unregulated-age-verification/
 
 Note that age ranges trasmitted via the API are still prone to misuse. Services have a legal duty to not misuse it, but there is not any real measure that would stop them from doing so. The only way to prevent this would be if such data was never sent in the first place. It would be significantly better if on-device parental controls were to be used instead, as this would prevent such data being transmitted in the first place.
 
