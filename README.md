@@ -33,6 +33,7 @@ This project recognises the dangers of [forced-identification](https://consumerr
 * https://www.thecanary.co/uk/news/2025/10/10/discord-data-leak/
 * https://www.bleepingcomputer.com/news/security/hackers-claim-discord-breach-exposed-data-of-55-million-users/
 * https://www.openrightsgroup.org/press-releases/roblox-reddit-and-discord-users-compelled-to-use-biometric-id-system-backed-by-palantir-co-founder-peter-thiel/
+* https://cybernews.com/security/global-data-leak-exposes-billion-records/
 * https://www.malwarebytes.com/blog/news/2026/02/age-verification-vendor-persona-left-frontend-exposed
 * https://reclaimthenet.org/yoti-gdpr-fine-age-verification
 * https://www.openrightsgroup.org/press-releases/13-year-olds-could-be-compelled-to-use-unregulated-age-verification/
