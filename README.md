@@ -27,11 +27,14 @@ There will not be a direct way for "account setup" wizards to use this project a
 
 ## Privacy and security issues
 This project recognises the dangers of [forced-identification](https://consumerrights.wiki/w/Forced_identification) methods:
+* https://www.biometricupdate.com/202208/id-me-finds-itself-accused-of-biometric-data-privacy-violation
 * https://www.eff.org/deeplinks/2024/06/hack-age-verification-company-shows-privacy-danger-social-media-laws
 * https://www.idstrong.com/sentinel/tea-app-data-breach/
 * https://reclaimthenet.org/age-verification-systems-france-privacy-risks-ai-forensics-report
 * https://www.thecanary.co/uk/news/2025/10/10/discord-data-leak/
 * https://www.bleepingcomputer.com/news/security/hackers-claim-discord-breach-exposed-data-of-55-million-users/
+* https://cyberinsider.com/verizon-owned-brand-total-wireless-suffers-breach-exposing-customer-data/
+* https://crypto.ro/en/analysis/sumsub-latest-security-breach-analyzed/
 * https://www.openrightsgroup.org/press-releases/roblox-reddit-and-discord-users-compelled-to-use-biometric-id-system-backed-by-palantir-co-founder-peter-thiel/
 * https://cybernews.com/security/global-data-leak-exposes-billion-records/
 * https://www.malwarebytes.com/blog/news/2026/02/age-verification-vendor-persona-left-frontend-exposed
