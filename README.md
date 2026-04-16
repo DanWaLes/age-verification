@@ -14,7 +14,7 @@ The following laws require an OS-level self-declared age verification age range 
 * [US - CO SB 26-051](https://leg.colorado.gov/bill_files/112795/download)
 
 The following laws require an OS-level self-declared data of birth, but do not explicitly require any sort of age range API and *will not be implemented*:
-* [US - H.R.8250 (Parents Decide Act)](https://www.congress.gov/119/bills/hr8250/BILLS-119hr8250ih.pdf)
+* [US - H.R.8250 ("Parents Decide Act")](https://www.congress.gov/119/bills/hr8250/BILLS-119hr8250ih.pdf)
 
 The following laws require an OS-level forced-identification age verification age range API and *will never be implemented* due to [past forced-identification incidents](#Privacy-and-security-issues):
 * [Brazil - Digital ECA](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/L15211.htm) (active)
