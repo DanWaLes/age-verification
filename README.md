@@ -17,7 +17,7 @@ The following laws require OS-level self-declared data of birth, but do not expl
 * [US - H.R.8250 (Parents Decide Act)](https://www.congress.gov/119/bills/hr8250/BILLS-119hr8250ih.pdf)
 
 The following laws require an OS-level forced-identification age verification age range API and *will never be implemented* due to [past forced-identification incidents](#Privacy-and-security-issues):
-* [Brazil - Digital ECA](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/L15211.htm (active)
+* [Brazil - Digital ECA](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/L15211.htm) (active)
 * [US - IL HB 5511](https://ilga.gov/documents/legislation/104/HB/PDF/10400HB5511lv.pdf)
 * [US - MI HB 1046](https://legislature.mi.gov/documents/2025-2026/billintroduced/House/pdf/2025-HIB-4429.pdf), [US - MI SB 191](https://www.legislature.mi.gov/documents/2025-2026/billintroduced/Senate/pdf/2025-SIB-0191.pdf)
 * [US - NY SB 2025-S8240](https://legislation.nysenate.gov/pdf/bills/2025/S8240)
