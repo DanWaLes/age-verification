@@ -29,7 +29,7 @@ To ensure security, only root users should be able set age verification details 
 There will not be a direct way for "account setup" wizards to use this project as it would add extra complexity. There is not a way to ensure the program is connected to a TTY, which would be needed to get a password to decrypt the encrypted DOB function parameter. "Account setup" wizards are able store encrypted age verification details in the expected encrypted format in expected file locations.
 
 ## Privacy and security issues
-This project recognises the dangers of [forced-identification](https://consumerrights.wiki/w/Forced_identification) methods:
+This project recognises the [dangers](https://csa-scientist-open-letter.org/ageverif-Feb2026) of [forced-identification](https://consumerrights.wiki/w/Forced_identification) methods:
 * https://www.biometricupdate.com/202208/id-me-finds-itself-accused-of-biometric-data-privacy-violation
 * https://www.eff.org/deeplinks/2024/06/hack-age-verification-company-shows-privacy-danger-social-media-laws
 * https://www.idstrong.com/sentinel/tea-app-data-breach/
