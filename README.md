@@ -12,6 +12,7 @@ The only goal of this project is to provide a secure age range API for regions r
 The following laws require an OS-level self-declared age verification age range API and *will be implemented*:
 * [US - CA AB-1043](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB1043) (active)
 * [US - CO SB 26-051](https://leg.colorado.gov/bill_files/112795/download)
+* [US - IL SB3977 ("Children's Social Media Safety Act")](https://ilga.gov/Legislation/BillStatus/FullText?GAID=18&DocNum=3977&DocTypeID=SB&LegId=167475&SessionID=114)
 
 The following laws require an OS-level self-declared date of birth, but do not explicitly require any sort of age range API and *will not be implemented*:
 * [US - H.R.8250 ("Parents Decide Act")](https://www.congress.gov/119/bills/hr8250/BILLS-119hr8250ih.pdf)
