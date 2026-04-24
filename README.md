@@ -3,8 +3,6 @@ Provides a secure age range API for self-declared OS-level age verification on L
 
 License: [Unlicense](LICENSE).
 
-NO ONE INVOLVED IN THIS PROJECT IS A LAWYER OR PROFICENTLY KNOWS LANGUAGES BEYOND ENGLISH.
-
 ## Motivation
 It is not the job of [init systems](https://en.wikipedia.org/wiki/Init) such as SystemD to force asking for [DOB and other PII](https://itsfoss.com/news/systemd-age-verification/), regardless of jusristiction (where OS-level age verification may not even be required), then store it in plain text. This project seeks to address [project over-reaching](https://youtube.com/watch?v=07hfECzhzG0) and security issues.
 
