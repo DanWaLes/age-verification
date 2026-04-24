@@ -10,18 +10,18 @@ It is not the job of [init systems](https://en.wikipedia.org/wiki/Init) such as 
 The only goal of this project is to provide a secure age range API for regions requring OS-level age verification for Linux systems, as per OS-level age verification laws. There are inherent [privacy and security issues](#Privacy-and-security-issues) around handeling age verification. This project will *never* implement forced-identification age verification age range API mandates because of them.
 
 The following laws require an OS-level self-declared age verification age range API and *will be implemented*:
-* [US - CA AB-1043](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB1043) (active)
-* [US - CO SB 26-051](https://leg.colorado.gov/bill_files/112795/download)
+* [US - CA AB-1043](https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB1043) (active)
+* [US - CO SB 26-051](https://leg.colorado.gov/bills/SB26-051)
 * [US - IL SB3977 ("Children's Social Media Safety Act")](https://ilga.gov/Legislation/BillStatus/FullText?GAID=18&DocNum=3977&DocTypeID=SB&LegId=167475&SessionID=114)
 
 The following laws require an OS-level self-declared date of birth, but do not explicitly require any sort of age range API and *will not be implemented*:
-* [US - H.R.8250 ("Parents Decide Act")](https://www.congress.gov/119/bills/hr8250/BILLS-119hr8250ih.pdf)
+* [US - H.R.8250 ("Parents Decide Act")](https://www.congress.gov/bill/119th-congress/house-bill/8250)
 
 The following laws require an OS-level forced-identification age verification age range API and *will never be implemented*:
 * [Brazil - Digital ECA](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/L15211.htm) (active)
 * [US - IL HB 5511](https://ilga.gov/documents/legislation/104/HB/PDF/10400HB5511lv.pdf)
 * ~~[US - MI HB 1046](https://legislature.mi.gov/documents/2025-2026/billintroduced/House/pdf/2025-HIB-4429.pdf), [US - MI SB 191](https://www.legislature.mi.gov/documents/2025-2026/billintroduced/Senate/pdf/2025-SIB-0191.pdf)~~ [Michigan ‘digital age’ bills pulled after privacy concerns raised](https://www.thecentersquare.com/michigan/article_7ca4e268-4a68-42fb-9042-f9d8604ebd7f.html)
-* [US - NY SB 2025-S8240](https://legislation.nysenate.gov/pdf/bills/2025/S8240)
+* [US - NY SB 2025-S8240](https://www.nysenate.gov/legislation/bills/2025/S8240)
   
 Currently both US - CA AB-1043 and US - CO SB 26-051 require the same age ranges. It is entierly possible that there will become multiple age brackets as new OS-level age verification laws get introduced or revised. This project is future-proofed against multiple age range brackets so that legacy data storage does not become an issue. This is done by asking users which juristiction applies. The use of IP address, precise location, time and date settings can be highly invasive and do not account for being in a different physical location. Dates of birth are being trusted to be correct, as should the region.
 
