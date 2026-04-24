@@ -5,65 +5,43 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-def get_users():
-	users = {}
+MIN_UID = 1000
+MAX_UID = 65534
 
-	with open('/etc/passwd', 'r') as f:
-		for line in f:
-			parts = line.strip().split(':')
-			uid = int(parts[2])
-
-			if uid >= 1000 and uid < 65534:
-				users[uid] = parts[0]
-
-	return users
-
-users = get_users()
-
-def set_av_details(uid):
-	if uid not in users:
-		print(f'Could not set age verification details for user {uid}.')
-		return
-
-	print('To determine which age range brackets are used, you must select which region you live in.')
-
-	region = None
-	regions = [
+def get_regions():
+	return [
 		'US - CA',
 		'US - CO'
 	]
-	regions_str = ',\n'.join(f"{i}: {region}" for i, region in enumerate(regions))
 
-	while True:
-		try:
-			print('Select one of:')
-			print(regions_str)
 
-			region = int(input('Region number: '))
+def is_valid_uid(uid):
+	return uid >= MIN_UID and uid < MAX_UI
 
-			if region < 0 or region > len(regions):
-				print('Invalid. Try again.')
-			else:
-				break
-		except ValueError:
-			print('Invalid. Try again.')
 
-	dob = None
+def is_valid_dob(dob):
+	try:
+		datetime.strptime(dob, '%Y-%m-%d')
+		return True
+	except ValueError:
+		return False
 
-	while True:
-		dob = input('Enter DOB (YYYY-MM-DD): ').strip()
 
-		try:
-			datetime.strptime(dob, '%Y-%m-%d')
-			break
-		except ValueError:
-			print('Invalid. Try again.')
+def set_av_details(uid, region, dob):
+	if not is_valid_uid(uid):
+		 raise ValueError(f'uid must be at least {MIN_UID} and less than {MAX_UID}; uid = {uid}.')
 
-	print('A password will be needed for securely storing age verification details.')
-	print('The user should enter a strong password.')
+	if not region in get_regions():
+		raise ValueError(f'region {region} is not supported.')
+
+	if not is_valid_dob(dob):
+		raise ValueError(f'dob must be a real YYYY-MM-DD date.')
 
 	av_dir = Path('/etc/age-verification')
 	av_dir.mkdir(exist_ok=True)
+
+	print('A password will be needed for securely storing age verification details.')
+	print('The user should enter a strong password.')
 
 	try:
 		# openssl prompts for password and password confirmation when the program is connected to a terminal
@@ -73,7 +51,7 @@ def set_av_details(uid):
 				'openssl', 'aes-256-cbc', '-pbkdf2', '-a',
 				'-out', f'{av_dir}/{uid}.enc'
 			],
-			input=f'{regions[region]}\n{dob}'.encode(),
+			input=f'{region}\n{dob}'.encode(),
 			stdout=subprocess.PIPE,
 			stderr=subprocess.PIPE,
 			check=True
@@ -84,15 +62,75 @@ def set_av_details(uid):
 		print(f'Encryption failed: {e.stderr.decode()}')
 	except Exception as e:
 		print(f'Error: {str(e)}')
+	
+
+def get_users():
+	users = {}
+
+	with open('/etc/passwd', 'r') as f:
+		for line in f:
+			parts = line.strip().split(':')
+			uid = int(parts[2])
+
+			if is_valid_uid(uid):
+				users[uid] = parts[0]
+
+	return users
+
+
+def get_uid():
+	while True:
+		try:
+			uid = int(input('User ID: ').strip())
+
+			if is_valid_uid(uid):
+				return uid
+
+			raise ValueError('')
+		except ValueError:
+			print('Invalid. Try again.')
+
+
+def get_region():
+	print('To determine which age range brackets are used, you must select which region the user lives in.')
+
+	regions_str = ',\n'.join(f'{i}: {region}' for i, region in enumerate(regions))
+
+	while True:
+		try:
+			print('Select one of:')
+			print(regions_str)
+
+			region_num = int(input('Region number: '))
+
+			return get_regions()[region_num]
+		except (ValueError, IndexError):
+			print('Invalid. Try again.')
+
+
+def get_dob():
+	while True:
+		dob = input('Enter DOB (YYYY-MM-DD): ').strip()
+
+		if is_valid_dob(dob):
+			return dob
+
+		print('Invalid. Try again.')
+
 
 while True:
 	try:
 		print('Enter an existing user ID.')
 		print('Users:')
 
-		for uid, uname in users.items():
+		for uid, uname in get_users().items():
 			print(f'{uid} - {uname}')
-			set_av_details(int(input('User ID: ').strip()))
+
+			uid = get_uid()
+			region = get_region()
+			dob = get_dob()
+
+			set_av_details(uid, region, dob)
 	except EOFError:
 		break
 	except KeyboardInterrupt:
