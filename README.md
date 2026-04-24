@@ -27,7 +27,9 @@ Currently both US - CA AB-1043 and US - CO SB 26-051 require the same age ranges
 
 To ensure security, only root users should be able set age verification details of users. Additionally, details needed for age range must be encrypted and only readable in program memory when the age range API is called.
 
-There will not be a direct way for "account setup" wizards to use this project as it would add extra complexity. "Account setup" wizards are able store encrypted age verification details in the [expected encrypted format in expected file locations](src/age-range-api.py) (see functions `dob_to_age_range` and `decrypt_dob_file`). Alternativly, root users could set age verification details of users after account creation using a terminal using the `av_mgmt` command.
+"Account setup" wizards can use this project by importing functions from [av_mgmt.py](src/ag_mgnt_core); see [av_mgnt_core.py](src/av_mgnt_core.py) as an example of this. There a likely ways for non-Python programs to import the functions as well.
+
+Root users can set age verification details of users after account creation using a terminal using the `av_mgmt` command.
 
 ## Privacy and security issues
 This project recognises the [dangers](https://csa-scientist-open-letter.org/ageverif-Feb2026) of online ID and biometric data collection:
