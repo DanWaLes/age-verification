@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import sys
+import getpass
 
 # https://askubuntu.com/questions/470982/how-to-add-a-python-module-to-syspath
 sys.path.insert(0, '/usr/lib/age-verification')
@@ -60,6 +61,13 @@ def get_dob():
 		print('Invalid. Try again.')
 
 
+def get_pw():
+	print('A password will be needed for securely storing age verification details.')
+	print('The user should enter a strong password.')
+
+	return getpass.getpass('Password: ')
+
+
 while True:
 	try:
 		print('Enter an existing user ID.')
@@ -68,11 +76,7 @@ while True:
 		for uid, uname in get_users().items():
 			print(f'{uid} - {uname}')
 
-			uid = get_uid()
-			region = get_region()
-			dob = get_dob()
-
-			set_av_details(uid, region, dob)
+		set_av_details(get_uid(), get_region(), get_dob(), get_pw())
 	except EOFError:
 		break
 	except KeyboardInterrupt:
