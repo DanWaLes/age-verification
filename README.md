@@ -25,9 +25,9 @@ The following laws require an OS-level forced-identification age verification ag
   
 Currently both US - CA AB-1043 and US - CO SB 26-051 require the same age ranges. It is entierly possible that there will become multiple age brackets as new OS-level age verification laws get introduced or revised. This project is future-proofed against multiple age range brackets so that legacy data storage does not become an issue. This is done by asking users which juristiction applies. The use of IP address, precise location, time and date settings can be highly invasive and do not account for being in a different physical location. Dates of birth are being trusted to be correct, as should the region.
 
-To ensure security, only root users should be able set age verification details of users. Additionally, details needed for age range must be encrypted at rest. Sensative details like DOB should not be passed as a function parameter in plain text as that allows it to be visible in the stack trace, undermining data security.
+To ensure security, only root users should be able set age verification details of users. Additionally, details needed for age range must be encrypted and only readable in program memory when the age range API is called.
 
-There will not be a direct way for "account setup" wizards to use this project as it would add extra complexity. There is not a way to ensure the program is connected to a TTY, which would be needed to get a password to decrypt the encrypted DOB function parameter. "Account setup" wizards are able store encrypted age verification details in the expected encrypted format in expected file locations.
+There will not be a direct way for "account setup" wizards to use this project as it would add extra complexity. "Account setup" wizards are able store encrypted age verification details in the [expected encrypted format in expected file locations](src/age-range-api.py) (see functions `dob_to_age_range` and `decrypt_dob_file`). Alternativly, root users could set age verification details of users after account creation using a terminal using the `av_mgmt` command.
 
 ## Privacy and security issues
 This project recognises the [dangers](https://csa-scientist-open-letter.org/ageverif-Feb2026) of online ID and biometric data collection:
