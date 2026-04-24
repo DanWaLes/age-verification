@@ -75,11 +75,11 @@ The age range API returns values in the following format:
 ## Interal file storage locations
 * `age-range-api.py` -> `/usr/lib/age-verification/age-range-api.py`
 * `av_mgmt.py` -> `/usr/sbin/age-verification/av_mgmt.py`
+* `av_mgnt_core.py` -> `/usr/lib/age-verification/av_mgnt_core.py`
 * `dbus-AgeVerification.service` -> `/usr/share/dbus-1/system-services/com.example.AgeVerification.service`
 * `dbus-AgeVerification.conf` -> `/usr/share/dbus-1/system.d/com.example.AgeVerification.conf`
 * `dbus-AgeVerification.xml` -> `/usr/share/dbus-1/interfaces/com.example.AgeVerification.xml`
 * `systemd-AgeVerification.service` -> `/usr/lib/systemd/system/com.example.AgeVerification.service`
-* `utils.py` -> `/usr/lib/age-verification/utils.py`
 
 ## Registering age range API service
 On systems using SystemD, users may need to run the following for the service to become active:
