@@ -48,6 +48,7 @@ This project recognises the [dangers](https://csa-scientist-open-letter.org/agev
 * https://www.malwarebytes.com/blog/news/2026/02/age-verification-vendor-persona-left-frontend-exposed
 * https://reclaimthenet.org/yoti-gdpr-fine-age-verification
 * https://cybernews.com/security/eu-age-verification-app-hack/
+* https://cybernews.com/security/ants-hack-france-19-million-records-id-agency-breach/
 
 Note that age ranges trasmitted via the API are still prone to misuse. Services have a legal duty to not misuse it, but there is not any real measure that would stop them from doing so. The only way to prevent this would be if such data was never sent in the first place. It would be significantly better if on-device parental controls were to be used instead, as this would prevent such data being transmitted in the first place.
 
