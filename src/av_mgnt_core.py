@@ -26,7 +26,7 @@ def is_valid_dob(dob):
 		return False
 
 
-def set_av_details(uid, region, dob):
+def set_av_details(uid, region, dob, pw):
 	# TODO pass password as a set_av_details param to openssl 
 
 	if not is_valid_uid(uid):
@@ -41,18 +41,14 @@ def set_av_details(uid, region, dob):
 	av_dir = Path('/etc/age-verification')
 	av_dir.mkdir(exist_ok=True)
 
-	print('A password will be needed for securely storing age verification details.')
-	print('The user should enter a strong password.')
-
 	try:
-		# openssl prompts for password and password confirmation when the program is connected to a terminal
-
 		subprocess.run(
 			[
 				'openssl', 'aes-256-cbc', '-pbkdf2', '-a',
-				'-out', f'{av_dir}/{uid}.enc'
+				'-out', f'{av_dir}/{uid}.enc',
+				'-pass', 'stdin'
 			],
-			input=f'{region}\n{dob}'.encode(),
+			input=f'{pw}\n{region}\n{dob}'.encode(),
 			stdout=subprocess.PIPE,
 			stderr=subprocess.PIPE,
 			check=True
