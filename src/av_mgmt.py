@@ -16,7 +16,7 @@ def get_regions():
 
 
 def is_valid_uid(uid):
-	return uid >= MIN_UID and uid < MAX_UI
+	return uid >= MIN_UID and uid < MAX_UID
 
 
 def is_valid_dob(dob):
@@ -32,10 +32,10 @@ def set_av_details(uid, region, dob):
 		 raise ValueError(f'uid must be at least {MIN_UID} and less than {MAX_UID}; uid = {uid}.')
 
 	if not region in get_regions():
-		raise ValueError(f'region {region} is not supported.')
+		raise ValueError(f'region not supported; region = {region}.')
 
 	if not is_valid_dob(dob):
-		raise ValueError(f'dob must be a real YYYY-MM-DD date.')
+		raise ValueError(f'dob must be a real YYYY-MM-DD date; dob = {dob}.')
 
 	av_dir = Path('/etc/age-verification')
 	av_dir.mkdir(exist_ok=True)
@@ -94,7 +94,7 @@ def get_uid():
 def get_region():
 	print('To determine which age range brackets are used, you must select which region the user lives in.')
 
-	regions_str = ',\n'.join(f'{i}: {region}' for i, region in enumerate(regions))
+	regions_str = ',\n'.join(f'{i}: {region}' for i, region in enumerate(get_regions()))
 
 	while True:
 		try:
