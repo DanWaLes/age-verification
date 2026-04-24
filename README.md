@@ -20,7 +20,7 @@ The following laws require an OS-level self-declared date of birth, but do not e
 The following laws require an OS-level forced-identification age verification age range API and *will never be implemented*:
 * [Brazil - Digital ECA](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/L15211.htm) (active)
 * [US - IL HB 5511](https://ilga.gov/documents/legislation/104/HB/PDF/10400HB5511lv.pdf)
-* ~~[US - MI HB 1046](https://legislature.mi.gov/documents/2025-2026/billintroduced/House/pdf/2025-HIB-4429.pdf), [US - MI SB 191](https://www.legislature.mi.gov/documents/2025-2026/billintroduced/Senate/pdf/2025-SIB-0191.pdf)~~ [Michigan ‘digital age’ bills pulled after privacy concerns raised](https://www.thecentersquare.com/michigan/article_7ca4e268-4a68-42fb-9042-f9d8604ebd7f.html)
+* [US - MI HB 4429](https://www.legislature.mi.gov/Bills/Bill?ObjectName=2025-HB-4429) ("Digital Age Assurance Act")
 * [US - NY SB 2025-S8240](https://www.nysenate.gov/legislation/bills/2025/S8240)
   
 Currently both US - CA AB-1043 and US - CO SB 26-051 require the same age ranges. It is entierly possible that there will become multiple age brackets as new OS-level age verification laws get introduced or revised. This project is future-proofed against multiple age range brackets so that legacy data storage does not become an issue. This is done by asking users which juristiction applies. The use of IP address, precise location, time and date settings can be highly invasive and do not account for being in a different physical location. Dates of birth are being trusted to be correct, as should the region.
