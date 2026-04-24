@@ -3,6 +3,7 @@
 import asyncio
 import getpass
 import os
+import subprocess
 import sys
 from datetime import date
 
@@ -13,8 +14,6 @@ from dbus_next.aio import MessageBus
 from dbus_next.service import ServiceInterface, method, dbus_property
 from dbus_next.constants import BusType
 
-
-from utils import run
 
 class AgeVerification(ServiceInterface):
 	def __init__(self):
@@ -105,6 +104,21 @@ def prompt_for_password(ui_title, ui_prompt, tty_prompt):
 		return getpass.getpass(tty_prompt)
 
 	raise RuntimeError('No supported mechanism to securely get password.')
+
+
+def run(commands):
+	result = subprocess.run(commands[0], capture_output = True, text = True)
+
+	if result.returncode != 0:
+		raise RuntimeError(f'Command failed: {result.stderr}')
+
+	for i in range(1, len(commands)):
+		result = subprocess.run(commands[i], input = result.stdout, capture_output = True, text = True)
+
+		if result.returncode != 0:
+			raise RuntimeError(f'Command failed: {result.stderr}')
+
+	return result.stdout.strip()
 
 
 async def main():
