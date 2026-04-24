@@ -27,8 +27,6 @@ def is_valid_dob(dob):
 
 
 def set_av_details(uid, region, dob, pw):
-	# TODO pass password as a set_av_details param to openssl 
-
 	if not is_valid_uid(uid):
 		 raise ValueError(f'uid must be at least {MIN_UID} and less than {MAX_UID}; uid = {uid}.')
 
