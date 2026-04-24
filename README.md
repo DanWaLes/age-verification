@@ -10,7 +10,7 @@ It is not the job of [init systems](https://en.wikipedia.org/wiki/Init) such as 
 The only goal of this project is to provide a secure age range API for regions requring OS-level age verification for Linux systems, as per OS-level age verification laws. There are inherent [privacy and security issues](#Privacy-and-security-issues) around handeling age verification. This project will *never* implement forced-identification age verification age range API mandates because of them.
 
 The following laws require an OS-level self-declared age verification age range API and *will be implemented*:
-* [US - CA AB-1043](https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB1043) (active)
+* [US - CA AB-1043](https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB1043) (enacted; effective 2027-01-01)
 * [US - CO SB 26-051](https://leg.colorado.gov/bills/SB26-051)
 * [US - IL SB 3977 ("Children's Social Media Safety Act")](https://ilga.gov/Legislation/BillStatus/FullText?GAID=18&DocNum=3977&DocTypeID=SB&LegId=167475&SessionID=114)
 
@@ -18,7 +18,7 @@ The following laws require an OS-level self-declared date of birth, but do not e
 * [US - H.R.8250 ("Parents Decide Act")](https://www.congress.gov/bill/119th-congress/house-bill/8250)
 
 The following laws require an OS-level forced-identification age verification age range API and *will never be implemented*:
-* [Brazil - Digital ECA](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/L15211.htm) (active)
+* [Brazil - Digital ECA](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/L15211.htm) (active since 2026-03-17)
 * [US - IL HB 5511 ("Children's Social Media Safety Act")](https://www.ilga.gov/Legislation/BillStatus/FullText?GAID=18&DocNum=5511&DocTypeID=HB&LegId=0&SessionID=114)
 * [US - MI HB 4429 ("Digital Age Assurance Act")](https://www.legislature.mi.gov/Bills/Bill?ObjectName=2025-HB-4429)
 * [US - NY SB 2025-S8102A](https://www.nysenate.gov/legislation/bills/2025/S8102/amendment/A)
