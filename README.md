@@ -19,7 +19,7 @@ The following laws require an OS-level self-declared date of birth, but do not e
 
 The following laws require an OS-level forced-identification age verification age range API and *will never be implemented*:
 * [Brazil - Digital ECA](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/L15211.htm) (active)
-* [US - IL HB 5511 ("Children's Social Media Act")](https://www.ilga.gov/Legislation/BillStatus/FullText?GAID=18&DocNum=5511&DocTypeID=HB&LegId=0&SessionID=114)
+* [US - IL HB 5511 ("Children's Social Media Safety Act")](https://www.ilga.gov/Legislation/BillStatus/FullText?GAID=18&DocNum=5511&DocTypeID=HB&LegId=0&SessionID=114)
 * [US - MI HB 4429 ("Digital Age Assurance Act")](https://www.legislature.mi.gov/Bills/Bill?ObjectName=2025-HB-4429)
 * [US - NY SB 2025-S8102A](https://www.nysenate.gov/legislation/bills/2025/S8102/amendment/A)
   
