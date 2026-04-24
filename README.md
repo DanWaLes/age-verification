@@ -1,6 +1,8 @@
 # age-verification
 Provides a secure age range API for self-declared OS-level age verification on Linux systems, as an optional standalone package.
 
+License: [Unlicense](LICENSE).
+
 NO ONE INVOLVED IN THIS PROJECT IS A LAWYER OR PROFICENTLY KNOWS LANGUAGES BEYOND ENGLISH.
 
 ## Motivation
