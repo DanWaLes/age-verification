@@ -31,11 +31,15 @@ There will not be a direct way for "account setup" wizards to use this project a
 
 ## Privacy and security issues
 This project recognises the [dangers](https://csa-scientist-open-letter.org/ageverif-Feb2026) of [forced-identification](https://consumerrights.wiki/w/Forced_identification) methods:
+* https://e-estonia.com/estonian-e-state-has-experienced-several-hacking-incidents-as-of-late-what-are-the-lessons-learned/
 * https://www.biometricupdate.com/202208/id-me-finds-itself-accused-of-biometric-data-privacy-violation
 * https://www.eff.org/deeplinks/2024/06/hack-age-verification-company-shows-privacy-danger-social-media-laws
+* https://gbhackers.com/authorities-arrested-hacker-2/
+* https://www.computerweekly.com/news/366622533/Government-faces-claims-of-serious-cyber-security-and-data-protection-problems-in-One-Login-digital-ID
+* https://www.livemint.com/news/india/aadhaar-data-leak-massive-data-breach-exposes-815-million-indians-personal-information-on-dark-web-details-here-11698712793223.html
 * https://www.idstrong.com/sentinel/tea-app-data-breach/
 * https://reclaimthenet.org/age-verification-systems-france-privacy-risks-ai-forensics-report
-* https://www.thecanary.co/uk/news/2025/10/10/discord-data-leak/
+* https://www.express.co.uk/news/politics/2113829/Starmer-ID-Card-security-threat
 * https://www.bleepingcomputer.com/news/security/hackers-claim-discord-breach-exposed-data-of-55-million-users/
 * https://cyberinsider.com/verizon-owned-brand-total-wireless-suffers-breach-exposing-customer-data/
 * https://crypto.ro/en/analysis/sumsub-latest-security-breach-analyzed/
@@ -43,7 +47,6 @@ This project recognises the [dangers](https://csa-scientist-open-letter.org/agev
 * https://cybernews.com/security/global-data-leak-exposes-billion-records/
 * https://www.malwarebytes.com/blog/news/2026/02/age-verification-vendor-persona-left-frontend-exposed
 * https://reclaimthenet.org/yoti-gdpr-fine-age-verification
-* https://www.openrightsgroup.org/press-releases/13-year-olds-could-be-compelled-to-use-unregulated-age-verification/
 * https://cybernews.com/security/eu-age-verification-app-hack/
 
 Note that age ranges trasmitted via the API are still prone to misuse. Services have a legal duty to not misuse it, but there is not any real measure that would stop them from doing so. The only way to prevent this would be if such data was never sent in the first place. It would be significantly better if on-device parental controls were to be used instead, as this would prevent such data being transmitted in the first place.
