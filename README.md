@@ -6,7 +6,7 @@ License: [Unlicense](LICENSE).
 ## Motivation
 This project seeks to address design flaws, project over-reaching and security issues.
 
-The design of the [DBus proposal](https://lists.ubuntu.com/archives/ubuntu-devel/2026-March/043510.html) does not make sense. Only an API for reading the age range is needed. No need to add setting age age or date of birth as part of the API. No need for taking a user parameter either. Applications should only care about the current user. The design assumes all age brackets will be the same. That is not a viable approach due to worldwide age category differences.
+The design of the [DBus proposal](https://lists.ubuntu.com/archives/ubuntu-devel/2026-March/043510.html) does not make sense. Only an API for reading the age range is needed. No need to add setting age or date of birth as part of the API. No need for taking a user parameter either. Applications should only care about the current user. The design assumes all age brackets will be the same. That is not a viable approach due to worldwide age category differences.
 
 Implementing the API as part of xdg-desktop-portal does not make sense. It would only use usable by sandboxed enviroments (Flatpak, Snap), rather than all programs. The laws require all system programs to use it. The portal would require spesific backend DE/WM implmentation, while a universal DBus API would only need to be implemented in one place.
 
@@ -41,7 +41,7 @@ The following laws require an OS-level forced-identification age verification ag
 * [US - MI HB 4429 ("Digital Age Assurance Act")](https://www.legislature.mi.gov/Bills/Bill?ObjectName=2025-HB-4429)
 * [US - NY SB 2025-S8102A](https://www.nysenate.gov/legislation/bills/2025/S8102/amendment/A)
   
-Currently both US - CA AB-1043 and US - CO SB 26-051 require the same age ranges. It is entierly possible that there will become multiple age brackets as new OS-level age verification laws get introduced or revised. This project is future-proofed against multiple age range brackets so that legacy data storage does not become an issue. This is done by asking users which jurisdiction applies. The use of IP address, precise location, time and date settings can be highly invasive and do not account for being in a different physical location. Dates of birth are being trusted to be correct, as should the region.
+Currently both US - CA AB 1043 and US - CO SB 26-051 require the same age ranges. It is entierly possible that there will become multiple age brackets as new OS-level age verification laws get introduced or revised. This project is future-proofed against multiple age range brackets so that legacy data storage does not become an issue. This is done by asking users which jurisdiction applies. The use of IP address, precise location, time and date settings can be highly invasive and do not account for being in a different physical location. Dates of birth are being trusted to be correct, as should the region.
 
 To ensure security, only root users should be able set age verification details of users. Additionally, details needed for age range must be encrypted and only readable in program memory when the age range API is called.
 
