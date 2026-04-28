@@ -8,7 +8,9 @@ This project seeks to address design flaws, project over-reaching and security i
 
 The design of the [DBus proposal](https://lists.ubuntu.com/archives/ubuntu-devel/2026-March/043510.html) does not make sense. Only an API for reading the age range is needed. No need to add setting age age or date of birth as part of the API. No need for taking a user parameter either. Applications should only care about the current user. The design assumes all age brackets will be the same. That is not a viable approach due to worldwide age category differences.
 
-It is not the job of [init systems](https://en.wikipedia.org/wiki/Init) such as SystemD to ask for [DOB and other PII](https://itsfoss.com/news/systemd-age-verification/). SystemD is [already more than an init system](https://youtube.com/watch?v=07hfECzhzG0).
+Implementing the API as part of xdg-desktop-portal does not make sense. It would only use usable by sandboxed enviroments (Flatpak, Snap), rather than all programs. The laws require all system programs to use it. The portal would require spesific backend DE/WM implmentation, while a universal DBus API would only need to be implemented in one place.
+
+It is not the job of [init systems](https://en.wikipedia.org/wiki/Init) such as SystemD to ask for [DOB and other PII](https://itsfoss.com/news/systemd-age-verification/). SystemD is [already more than an init system](https://youtube.com/watch?v=07hfECzhzG0). Not all Linux systems depend on SystemD. There are alternative init systems. Choice in all aspects of the system allows for innovation.
 
 The SystemD implementation stores date of birth in plain text. This is not how PII should be treated - it must be stored securely.
 
@@ -21,8 +23,6 @@ Even though the birth date field is optional in SystemD UserDB, it becomes manda
 * [Ubuntu Desktop Provision PR #1339](https://github.com/canonical/ubuntu-desktop-provision/pull/1339)
 
 The implementations assume all users live in a jurisdiction where OS-level verification applies. That is simply not the case.
-
-Not all Linux systems depend on SystemD. There are alternative init systems. Choice in all aspects of the system allows for innovation.
 
 ## Scope
 The only goal of this project is to provide a secure age range API for regions requiring OS-level age verification for Linux systems, as per OS-level age verification laws. There are inherent [privacy and security issues](#Privacy-and-security-issues) around handling age verification. This project will *never* implement forced-identification age verification age range API mandates because of them.
@@ -109,3 +109,5 @@ On systems using SystemD, users may need to run the following for the service to
 # systemctl daemon-reload
 # systemctl enable com.example.AgeVerification.service
 ```
+
+The dbus service may need to be restarted.
