@@ -58,13 +58,13 @@ Note that age ranges trasmitted via the API are still prone to misuse. Services 
 
 ## Compliance details
 Compatibility for the following OS-level self-declared age verification age range API has been implemented:
-* US - CA AB-1043
+* US - CA AB 1043
 * US - CO SB 26-051
 
 The age range API returns values in the following format:
 * `>=a - <b` - eg `>=0 - <13`
 * `>=a` - eg `>=18`
-* `?` - denotes an unknown age range
+* `?` - Not required or unknown
 
 # Packaging
 ## Dependencies
