@@ -4,7 +4,25 @@ Provides a secure age range API for self-declared OS-level age verification on L
 License: [Unlicense](LICENSE).
 
 ## Motivation
-It is not the job of [init systems](https://en.wikipedia.org/wiki/Init) such as SystemD to force asking for [DOB and other PII](https://itsfoss.com/news/systemd-age-verification/), regardless of jusristiction (where OS-level age verification may not even be required), then store it in plain text. This project seeks to address [project over-reaching](https://youtube.com/watch?v=07hfECzhzG0) and security issues.
+This project seeks to address design flaws, [project over-reaching](https://youtube.com/watch?v=07hfECzhzG0) and security issues.
+
+The design of the [DBus proposal](https://lists.ubuntu.com/archives/ubuntu-devel/2026-March/043510.html) does not make sense. Only an API for reading the age range is needed. No need to add setting age age or date of brith as part of the API. No need for taking a user paramter either. Applications should only care about the current user. The design assumes all age brackets will be the same. That is not a viable approach due to worldwide age categroty differences.
+
+It is not the job of [init systems](https://en.wikipedia.org/wiki/Init) such as SystemD to ask for [DOB and other PII](https://itsfoss.com/news/systemd-age-verification/).
+
+The SystemD implentation stores date of birth in plain text. This is not how PII should be treated - it must be stored securly.
+
+Even though the birth date field is optional in SystemD UserDB, it becomes manditory in all implmenetations that integrate with it. There have been many PRs to deeply integrate with the SystemD implmenetation:
+* [accountsservice](https://gitlab.freedesktop.org/accountsservice/accountsservice/-/merge_requests/176)
+* [xdg-desktop-portal](https://github.com/flatpak/xdg-desktop-portal/pull/1922)
+* [Calamares](https://codeberg.org/Calamares/calamares/pulls/2499)
+* [Arch install](https://github.com/archlinux/archinstall/pull/4290)
+* [Ubuntu Desktop Provision PR #1338](https://github.com/canonical/ubuntu-desktop-provision/pull/1338)
+* [Ubuntu Desktop Provision PR #1339](https://github.com/canonical/ubuntu-desktop-provision/pull/1339)
+
+All implmentations assume all users live in a jusristiction where OS-level verification applies. It is false to assume everyone is in a juristiction where OS-level age verification applies.
+
+Not all Linux systems depend on SystemD. There are alternative init systems. Choice in all aspects of the system allows for innovation.
 
 ## Scope
 The only goal of this project is to provide a secure age range API for regions requring OS-level age verification for Linux systems, as per OS-level age verification laws. There are inherent [privacy and security issues](#Privacy-and-security-issues) around handeling age verification. This project will *never* implement forced-identification age verification age range API mandates because of them.
