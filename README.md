@@ -4,18 +4,18 @@ Provides a secure age range API for self-declared OS-level age verification on L
 License: [Unlicense](LICENSE).
 
 ## Motivation
-This project seeks to address design flaws, [project over-reaching](https://youtube.com/watch?v=07hfECzhzG0) and security issues.
+This project seeks to address design flaws, project over-reaching and security issues.
 
 The design of the [DBus proposal](https://lists.ubuntu.com/archives/ubuntu-devel/2026-March/043510.html) does not make sense. Only an API for reading the age range is needed. No need to add setting age age or date of birth as part of the API. No need for taking a user parameter either. Applications should only care about the current user. The design assumes all age brackets will be the same. That is not a viable approach due to worldwide age category differences.
 
-It is not the job of [init systems](https://en.wikipedia.org/wiki/Init) such as SystemD to ask for [DOB and other PII](https://itsfoss.com/news/systemd-age-verification/).
+It is not the job of [init systems](https://en.wikipedia.org/wiki/Init) such as SystemD to ask for [DOB and other PII](https://itsfoss.com/news/systemd-age-verification/). SystemD is [already more than an init system](https://youtube.com/watch?v=07hfECzhzG0).
 
 The SystemD implementation stores date of birth in plain text. This is not how PII should be treated - it must be stored securely.
 
 Even though the birth date field is optional in SystemD UserDB, it becomes mandatory in all implementations that integrate with it. There have been many PRs to deeply integrate with the SystemD implementation:
 * [accountsservice](https://gitlab.freedesktop.org/accountsservice/accountsservice/-/merge_requests/176)
 * [xdg-desktop-portal](https://github.com/flatpak/xdg-desktop-portal/pull/1922)
-* [Calamares](https://codeberg.org/Calamares/calamares/pulls/2499)
+* [Calamares installer](https://codeberg.org/Calamares/calamares/pulls/2499)
 * [Arch install](https://github.com/archlinux/archinstall/pull/4290)
 * [Ubuntu Desktop Provision PR #1338](https://github.com/canonical/ubuntu-desktop-provision/pull/1338)
 * [Ubuntu Desktop Provision PR #1339](https://github.com/canonical/ubuntu-desktop-provision/pull/1339)
