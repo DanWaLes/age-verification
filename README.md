@@ -6,13 +6,13 @@ License: [Unlicense](LICENSE).
 ## Motivation
 This project seeks to address design flaws, [project over-reaching](https://youtube.com/watch?v=07hfECzhzG0) and security issues.
 
-The design of the [DBus proposal](https://lists.ubuntu.com/archives/ubuntu-devel/2026-March/043510.html) does not make sense. Only an API for reading the age range is needed. No need to add setting age age or date of brith as part of the API. No need for taking a user paramter either. Applications should only care about the current user. The design assumes all age brackets will be the same. That is not a viable approach due to worldwide age categroty differences.
+The design of the [DBus proposal](https://lists.ubuntu.com/archives/ubuntu-devel/2026-March/043510.html) does not make sense. Only an API for reading the age range is needed. No need to add setting age age or date of birth as part of the API. No need for taking a user parameter either. Applications should only care about the current user. The design assumes all age brackets will be the same. That is not a viable approach due to worldwide age category differences.
 
 It is not the job of [init systems](https://en.wikipedia.org/wiki/Init) such as SystemD to ask for [DOB and other PII](https://itsfoss.com/news/systemd-age-verification/).
 
-The SystemD implentation stores date of birth in plain text. This is not how PII should be treated - it must be stored securly.
+The SystemD implementation stores date of birth in plain text. This is not how PII should be treated - it must be stored securely.
 
-Even though the birth date field is optional in SystemD UserDB, it becomes manditory in all implmenetations that integrate with it. There have been many PRs to deeply integrate with the SystemD implmenetation:
+Even though the birth date field is optional in SystemD UserDB, it becomes mandatory in all implementations that integrate with it. There have been many PRs to deeply integrate with the SystemD implementation:
 * [accountsservice](https://gitlab.freedesktop.org/accountsservice/accountsservice/-/merge_requests/176)
 * [xdg-desktop-portal](https://github.com/flatpak/xdg-desktop-portal/pull/1922)
 * [Calamares](https://codeberg.org/Calamares/calamares/pulls/2499)
@@ -20,12 +20,12 @@ Even though the birth date field is optional in SystemD UserDB, it becomes mandi
 * [Ubuntu Desktop Provision PR #1338](https://github.com/canonical/ubuntu-desktop-provision/pull/1338)
 * [Ubuntu Desktop Provision PR #1339](https://github.com/canonical/ubuntu-desktop-provision/pull/1339)
 
-All implmentations assume all users live in a jusristiction where OS-level verification applies. It is false to assume everyone is in a juristiction where OS-level age verification applies.
+The implementations assume all users live in a jurisdiction where OS-level verification applies. That is simply not the case.
 
 Not all Linux systems depend on SystemD. There are alternative init systems. Choice in all aspects of the system allows for innovation.
 
 ## Scope
-The only goal of this project is to provide a secure age range API for regions requring OS-level age verification for Linux systems, as per OS-level age verification laws. There are inherent [privacy and security issues](#Privacy-and-security-issues) around handeling age verification. This project will *never* implement forced-identification age verification age range API mandates because of them.
+The only goal of this project is to provide a secure age range API for regions requiring OS-level age verification for Linux systems, as per OS-level age verification laws. There are inherent [privacy and security issues](#Privacy-and-security-issues) around handling age verification. This project will *never* implement forced-identification age verification age range API mandates because of them.
 
 The following laws require an OS-level self-declared age verification age range API and *will be implemented*:
 * [US - CA AB 1043 ("Age verification signals: software applications and online services")](https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB1043) (enacted; activates on 2027-01-01)
@@ -41,7 +41,7 @@ The following laws require an OS-level forced-identification age verification ag
 * [US - MI HB 4429 ("Digital Age Assurance Act")](https://www.legislature.mi.gov/Bills/Bill?ObjectName=2025-HB-4429)
 * [US - NY SB 2025-S8102A](https://www.nysenate.gov/legislation/bills/2025/S8102/amendment/A)
   
-Currently both US - CA AB-1043 and US - CO SB 26-051 require the same age ranges. It is entierly possible that there will become multiple age brackets as new OS-level age verification laws get introduced or revised. This project is future-proofed against multiple age range brackets so that legacy data storage does not become an issue. This is done by asking users which juristiction applies. The use of IP address, precise location, time and date settings can be highly invasive and do not account for being in a different physical location. Dates of birth are being trusted to be correct, as should the region.
+Currently both US - CA AB-1043 and US - CO SB 26-051 require the same age ranges. It is entierly possible that there will become multiple age brackets as new OS-level age verification laws get introduced or revised. This project is future-proofed against multiple age range brackets so that legacy data storage does not become an issue. This is done by asking users which jurisdiction applies. The use of IP address, precise location, time and date settings can be highly invasive and do not account for being in a different physical location. Dates of birth are being trusted to be correct, as should the region.
 
 To ensure security, only root users should be able set age verification details of users. Additionally, details needed for age range must be encrypted and only readable in program memory when the age range API is called.
 
