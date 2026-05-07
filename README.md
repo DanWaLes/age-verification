@@ -2,6 +2,7 @@
 Provides a secure age range API for self-declared OS-level age verification on Linux systems, as an optional standalone package.
 
 License: [Unlicense](LICENSE).
+AI Policy: [AI Policy](AI POLICY).
 
 ## Motivation
 This project seeks to address design flaws, project over-reaching and security issues.
