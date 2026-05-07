@@ -7,4 +7,4 @@ When raising an issue, include region affected (eg CA, CO) and the legistlation 
 
 # Creating pull requests
 ## AI Policy
-See [AI Policy](AI POLICY). Failiure to adhear to the policy will result in the pull request being rejected.
+See [AI Policy](AI%20POLICY.md). Failiure to adhear to the policy will result in the pull request being rejected.
