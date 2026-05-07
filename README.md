@@ -3,7 +3,7 @@ Provides a secure age range API for self-declared OS-level age verification on L
 
 License: [Unlicense](LICENSE).
 
-AI Policy: [AI Policy](AI%20POLICY.md).
+For contributing guidlines, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Motivation
 This project seeks to address design flaws, project over-reaching and security issues.
