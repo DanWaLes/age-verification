@@ -52,7 +52,12 @@ To ensure security, only root users should be able set age verification details 
 Root users can set age verification details of users after account creation using a terminal using the `av_mgmt` command.
 
 ## Privacy and security issues
-This project recognises the [dangers](https://csa-scientist-open-letter.org/ageverif-Feb2026) of KYC, ID and biometric data collection:
+This project recognises the dangers of age-gating approaches:
+* [Joint statement of security and privacy scientists and researchers on Age Assurance](https://csa-scientist-open-letter.org/ageverif-Feb2026)
+* [Joint Statement: UK policymakers must prioritise addressing
+the roots of online harm, not undermining the open web](https://www.openrightsgroup.org/press-releases/companies-and-civil-society-warn-that-uk-is-undermining-open-web/)
+
+This project also recognises the dangers of KYC, ID and biometric data collection:
 * https://e-estonia.com/estonian-e-state-has-experienced-several-hacking-incidents-as-of-late-what-are-the-lessons-learned/
 * https://www.biometricupdate.com/202208/id-me-finds-itself-accused-of-biometric-data-privacy-violation
 * https://www.eff.org/deeplinks/2024/06/hack-age-verification-company-shows-privacy-danger-social-media-laws
