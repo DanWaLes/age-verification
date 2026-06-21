@@ -59,7 +59,9 @@ the roots of online harm, not undermining the open web](https://www.openrightsgr
 
 This project also recognises the dangers of KYC, ID and biometric data collection:
 * https://e-estonia.com/estonian-e-state-has-experienced-several-hacking-incidents-as-of-late-what-are-the-lessons-learned/
+* https://cybernews.com/security/popular-apps-left-biometric-data-ids-of-millions-of-users-in-danger/
 * https://www.biometricupdate.com/202208/id-me-finds-itself-accused-of-biometric-data-privacy-violation
+* https://thehackernews.com/2022/12/ftc-fines-fortnite-maker-epic-games-275.html
 * https://www.eff.org/deeplinks/2024/06/hack-age-verification-company-shows-privacy-danger-social-media-laws
 * https://gbhackers.com/authorities-arrested-hacker-2/
 * https://www.computerweekly.com/news/366622533/Government-faces-claims-of-serious-cyber-security-and-data-protection-problems-in-One-Login-digital-ID
