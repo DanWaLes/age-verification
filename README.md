@@ -79,6 +79,8 @@ This project also recognises the dangers of KYC, ID and biometric data collectio
 * https://cybernews.com/security/eu-age-verification-app-hack/
 * https://cybernews.com/security/ants-hack-france-19-million-records-id-agency-breach/
 * https://techcrunch.com/2026/05/26/uk-visa-portal-spilled-thousands-of-applicants-passports-and-selfies-online-and-hasnt-fixed-the-leak/
+* https://www.theverge.com/tech/947157/passports-data-breach-cannabis-club-systems-nefos-puffpal
+* https://www.bleepingcomputer.com/news/security/texas-govt-data-breach-exposes-over-3-million-drivers-licenses/
 
 Note that age ranges trasmitted via the API are still prone to misuse. Services have a legal duty to not misuse it, but there is not any real measure that would stop them from doing so. The only way to prevent this would be if such data was never sent in the first place. It would be significantly better if on-device parental controls were to be used instead, as this would prevent such data being transmitted in the first place.
 
