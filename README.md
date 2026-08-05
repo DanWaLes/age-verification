@@ -30,8 +30,8 @@ The implementations assume all users live in a jurisdiction where OS-level verif
 The only goal of this project is to provide a secure age range API for regions requiring OS-level age verification for Linux systems, as per OS-level age verification laws. There are inherent [privacy and security issues](#Privacy-and-security-issues) around handling age verification. This project will *never* implement forced-identification age verification age range API mandates because of them.
 
 The following laws require an OS-level self-declared age verification age range API and *will be implemented*:
-* [US - CA AB 1043 ("Age verification signals: software applications and online services")](https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB1043) (enacted; activates on 2027-01-01)
-* [US - CO SB 26-051 ("Age Attestation on Computing Devices")](https://leg.colorado.gov/bills/SB26-051)
+* ~~[US - CA AB 1043 ("Age verification signals: software applications and online services")](https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB1043) (enacted; activates on 2027-01-01)~~ [Open source exemption](https://www.gamingonlinux.com/2026/05/colorado-and-california-age-verification-bills-exempt-open-source-operating-systems/)
+* ~~[US - CO SB 26-051 ("Age Attestation on Computing Devices")](https://leg.colorado.gov/bills/SB26-051)~~ [Open source exemption](https://www.gamingonlinux.com/2026/05/colorado-and-california-age-verification-bills-exempt-open-source-operating-systems/)
 * [US - IL SB 3977 ("Children's Social Media Safety Act")](https://ilga.gov/Legislation/BillStatus/FullText?GAID=18&DocNum=3977&DocTypeID=SB&LegId=167475&SessionID=114)
 
 The following laws require an OS-level self-declared date of birth, but do not explicitly require any sort of age range API and *will not be implemented*:
